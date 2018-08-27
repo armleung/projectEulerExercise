@@ -1,1 +1,2 @@
-# projectEulerExercise
+# ProjectEuler Exercise
+Description : Python Study 
