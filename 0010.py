@@ -1,7 +1,9 @@
-finalPrimeSeries = [2]
-totalPrimeNumber = 1
-trialNumber = finalPrimeSeries[-1] + 1
+#The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+#Find the sum of all the primes below two million.
 import math
+
+finalPrimeSeries = [2]
+trialNumber = 3
 
 def isPrime(n):
     if n == 1 :
@@ -23,13 +25,11 @@ def isPrime(n):
             f=f+6
     return True
 
-while (totalPrimeNumber < 10001):
-    if (isPrime(trialNumber)):
+while trialNumber < 2000000:
+    if isPrime(trialNumber):
+        print(trialNumber)
         finalPrimeSeries.append(trialNumber)
-        totalPrimeNumber += 1
-        print ("The {}th primeNumber is {}".format(totalPrimeNumber,trialNumber))
     
     trialNumber += 2
 
-print ("The {}th primeNumber is {}".format(totalPrimeNumber,trialNumber-1))
-    
+print(sum(finalPrimeSeries))
